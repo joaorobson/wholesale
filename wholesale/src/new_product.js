@@ -15,6 +15,7 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
+import MyMenu from './menu'
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -176,6 +177,7 @@ ResponsiveContainer.propTypes = {
 
 const HomepageLayout = () => (
   <ResponsiveContainer>
+    <MyMenu />
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
