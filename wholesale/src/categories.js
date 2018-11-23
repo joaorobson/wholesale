@@ -4,16 +4,12 @@ import {
   Card,
   Input,
   Icon,
-  Divider,
   Dropdown,
-  Grid,
-  Header,
   Image,
-  List,
   Menu,
-  Segment,
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
+import { Link } from 'react-router-dom'  
 
 const Categories = () => (
   <div>
@@ -43,26 +39,33 @@ const Categories = () => (
     <Container style={{ marginTop: '7em' }}>
       <Card.Group itemsPerRow={3} textAlign='center'>
 
-        <Card style={{'boxShadow':'none'}}>
-          <Image centered src='https://i.imgur.com/bzW1Dio.jpg' size='small' />
-          <Card.Content style={{'borderTop':'none'}}>
-            <Card.Header  textAlign='center'>Humanity</Card.Header>
-          </Card.Content>
-        </Card>
+        <Link to='/product_1' >
+          <Card style={{'boxShadow':'none'}}>
+            <Image centered src='https://react.semantic-ui.com/images/wireframe/white-image.png' size='small' />
+            <Card.Content style={{'borderTop':'none'}}>
+              <Card.Header  textAlign='center'>Brinquedos</Card.Header>
+            </Card.Content>
+          </Card>
+        </Link>
 
-        <Card style={{'boxShadow':'none'}}>
-          <Image centered src='https://i.imgur.com/JtWr9IG.jpg' size='small' />
-          <Card.Content style={{'borderTop':'none'}}>
-            <Card.Header textAlign='center'>Before and After</Card.Header>
-          </Card.Content>
-        </Card>
+        <Link to='/product_1' >
+          <Card style={{'boxShadow':'none'}}>
+            <Image centered src='https://react.semantic-ui.com/images/wireframe/white-image.png' size='small' />
+            <Card.Content style={{'borderTop':'none'}}>
+              <Card.Header textAlign='center'>Eletrônicos</Card.Header>
+            </Card.Content>
+          </Card>
+        </Link>
 
-        <Card style={{'boxShadow':'none'}}>
-          <Image centered src='https://i.imgur.com/SSLDUUH.jpg' size='small' />
-          <Card.Content style={{'borderTop':'none'}}>
-            <Card.Header textAlign='center'>Walk</Card.Header>
-          </Card.Content>
-        </Card>
+        <Link to='/product_1' >
+          <Card style={{'boxShadow':'none'}}>
+            <Image centered src='https://react.semantic-ui.com/images/wireframe/white-image.png' size='small' />
+            <Card.Content style={{'borderTop':'none'}}>
+              <Card.Header textAlign='center'>Livros</Card.Header>
+            </Card.Content>
+          </Card>
+        </Link>
+        
 
       </Card.Group>
     </Container>
