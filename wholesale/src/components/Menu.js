@@ -1,22 +1,17 @@
 import React from 'react'
 import {
   Container,
-  Card,
-  Input,
   Icon,
   Dropdown,
-  Image,
   Menu,
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import { Link } from 'react-router-dom'  
-
 
 const MyMenu = () => (
   <Menu borderless size='massive' fixed='top' inverted>
       <Container>
         <Menu.Item >
-          wholesale
+          <h1>Wholesale</h1>
         </Menu.Item>
 
         <Menu.Item position="right"><Icon inverted circular size="large"  name='truck' /></Menu.Item>

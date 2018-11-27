@@ -15,7 +15,7 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
-import MyMenu from './menu'
+import MyMenu from './Menu'
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -73,7 +73,6 @@ class DesktopContainer extends Component {
 
   render() {
     const { children } = this.props
-    const { fixed } = this.state
 
     return (
       <Responsive minWidth={Responsive.onlyTablet.minWidth}>
