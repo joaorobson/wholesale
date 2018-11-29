@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import {
   Button,
   Container,
@@ -196,7 +197,9 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em', paddingBottom : '50px'}}>
               R$ 42,00
             </Header>
-              <Button size='huge'>Comprar</Button>
+              <Link to='/checkout'>
+                <Button size='huge'>Comprar</Button>
+              </Link>
               <Button size='huge'>Adicionar ao carrinho</Button>
           </Grid.Column>
         </Grid.Row>
