@@ -5,14 +5,17 @@ import {
   Dropdown,
   Menu,
 } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
 
 const MyMenu = () => (
   <Menu borderless size='massive' fixed='top' inverted>
       <Container>
-        <Menu.Item >
-          <h1>Wholesale</h1>
-        </Menu.Item>
+        <Link to="/">
+          <Menu.Item >
+            <h1>Wholesale</h1>
+          </Menu.Item>
+        </Link>
 
         <Menu.Item position="right"><Icon inverted circular size="large"  name='cart' /></Menu.Item>
         <Menu.Item ><Icon inverted circular size="large"  name='user' /></Menu.Item>
