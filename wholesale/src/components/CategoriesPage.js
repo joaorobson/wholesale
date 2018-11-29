@@ -21,7 +21,7 @@ const Categories = () => (
           <Grid.Column>
             <Link to='/product_1' >
               <Card style={{'boxShadow':'none'}}>
-                <Image centered src='/assets/images/icons8-batom-64.png' size='small' />
+                <Image centered src='/assets/images/beleza.jpg' size='small' />
                 <Card.Content style={{'borderTop':'none'}}>
                   <Card.Header  textAlign='center'>Beleza</Card.Header>
                 </Card.Content>
@@ -31,7 +31,7 @@ const Categories = () => (
           <Grid.Column>
             <Link to='/product_1' >
               <Card style={{'boxShadow':'none'}}>
-                <Image centered src='../assets/images/icons8-roupas-64.png' size='small' />
+                <Image centered src='../assets/images/roupas.jpeg' size='small' />
                 <Card.Content style={{'borderTop':'none'}}>
                   <Card.Header  textAlign='center'>Roupas e Acessórios</Card.Header>
                 </Card.Content>
@@ -41,7 +41,7 @@ const Categories = () => (
           <Grid.Column>
             <Link to='/product_1' >
               <Card style={{'boxShadow':'none'}}>
-                <Image centered src='../assets/images/icons8-smartphones-64.png' size='small' />
+                <Image centered src='../assets/images/celular.jpeg' size='small' />
                 <Card.Content style={{'borderTop':'none'}}>
                   <Card.Header  textAlign='center'>Smarthphones e Telefones</Card.Header>
                 </Card.Content>
@@ -51,7 +51,7 @@ const Categories = () => (
           <Grid.Column>
             <Link to='/product_1' >
               <Card style={{'boxShadow':'none'}}>
-                <Image centered src='../assets/images/icons8-notebook-64.png' size='small' />
+                <Image centered src='../assets/images/note.jpg' size='small' />
                 <Card.Content style={{'borderTop':'none'}}>
                   <Card.Header  textAlign='center'>Informática</Card.Header>
                 </Card.Content>
@@ -61,7 +61,7 @@ const Categories = () => (
           <Grid.Column>
             <Link to='/product_1' >
               <Card style={{'boxShadow':'none'}}>
-                <Image centered src='../assets/images/icons8-bengala-doce-64.png' size='small' />
+                <Image centered src='../assets/images/doces.jpg' size='small' />
                 <Card.Content style={{'borderTop':'none'}}>
                   <Card.Header  textAlign='center'>Doces</Card.Header>
                 </Card.Content>
