@@ -14,7 +14,7 @@ const MyMenu = () => (
           <h1>Wholesale</h1>
         </Menu.Item>
 
-        <Menu.Item position="right"><Icon inverted circular size="large"  name='truck' /></Menu.Item>
+        <Menu.Item position="right"><Icon inverted circular size="large"  name='cart' /></Menu.Item>
         <Menu.Item ><Icon inverted circular size="large"  name='user' /></Menu.Item>
 
         <Dropdown item simple icon={<Icon inverted circular size="large"  name='sidebar' />}>

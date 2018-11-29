@@ -99,9 +99,11 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Cadastrar 
-                  </Button>
+                    <Link to='/register'>
+                        <Button as='a' inverted={!fixed}>
+                          Cadastrar 
+                        </Button>
+                    </Link>
       <Popup trigger={<Button inverted style={{ 'marginLeft': '0.5em' }}>Sign Up</Button> }  position='bottom center' on='click'  open={this.state.isOpen}
             onClose={this.handleClose}
             onOpen={this.handleOpen}>  
