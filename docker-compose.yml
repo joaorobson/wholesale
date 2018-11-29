@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  wholesale:
+    container_name: wholesale
+    build:
+      context: ./wholesale
+    volumes:
+      - './wholesale:/wholesale'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
