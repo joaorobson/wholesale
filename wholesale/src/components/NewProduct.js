@@ -198,7 +198,6 @@ const HomepageLayout = () => (
             </Header>
               <Button size='huge'>Comprar</Button>
               <Button size='huge'>Adicionar ao carrinho</Button>
-
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

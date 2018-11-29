@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from './login'
-import Categories from './components/CategoriesPage'
-import Product from './components/NewProduct'
+import Login from './login';
+import Categories from './components/CategoriesPage';
+import Product from './components/NewProduct';
+import Checkout from './components/Checkout';
+
 
 function Routes() {
   return (
@@ -11,6 +13,7 @@ function Routes() {
         <Route exact path="/" component={Login} />
         <Route path="/categories" component={Categories} />
         <Route path="/product_1" component={Product} />
+        <Route path="/checkout" component={Checkout} />
       </div>
     </Router>
   );
