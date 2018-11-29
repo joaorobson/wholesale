@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
   Container,
   Icon,
@@ -11,15 +12,15 @@ const MyMenu = () => (
   <Menu borderless size='massive' fixed='top' inverted>
       <Container>
         <Menu.Item >
-          <h1>Wholesale</h1>
+          <Link to='/categories'><h1>Wholesale</h1></Link>
         </Menu.Item>
 
-        <Menu.Item position="right"><Icon inverted circular size="large"  name='cart' /></Menu.Item>
+        <Menu.Item position="right" as='a' href='/checkout'><Icon inverted circular size="large"  name='cart' /></Menu.Item>
         <Menu.Item ><Icon inverted circular size="large"  name='user' /></Menu.Item>
 
         <Dropdown item simple icon={<Icon inverted circular size="large"  name='sidebar' />}>
           <Dropdown.Menu style={{ 'left': 'auto', 'right': 0 }}>
-            <Dropdown.Item>Novo produto</Dropdown.Item>
+            <Dropdown.Item as='a' href='/new_product'>Novo produto</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item>Minhas compras</Dropdown.Item>
             <Dropdown.Divider />

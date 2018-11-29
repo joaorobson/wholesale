@@ -14,11 +14,6 @@ import {
   Segment,
   Sidebar,
   Visibility,
-  Input,
-  Label,
-  TextArea,
-  Form,
-  Select
 } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import MyMenu from './Menu'
@@ -180,54 +175,50 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const HomepageLayout = () => (
+const Batom = () => (
   <ResponsiveContainer>
     <MyMenu />
     <Segment style={{ padding: '8em 0em' }} vertical>
-    <Container>
-      <Header as='h2' style={{marginBottom: 43}}> Cadastrar Produto </Header>
-      <Form><Grid>
+      <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
-            <Grid.Column width={5}>
-                <Input fluid style={{marginBottom: 20}} size='large' placeholder='Nome do Produto' />
-                <TextArea  fluid style={{marginBottom: 20, height: 200}} size='large' placeholder='Descrição'/>
-                <Input fluid style={{marginBottom: 20}} labelPosition='right' type='text' placeholder='Preço' size='large'>
-                    <Label basic>$</Label>
-                    <input/>
-                </Input>
-            </Grid.Column>
-            <Grid.Column width={5}>
-                <Select placeholder='Categoria' fluid style={{marginBottom: 20}} size='big'
-                    options={[
-                        {key: '1', text: 'Vestuário' , flag: 'Vestuário' , value: 'Vestuário' },
-                        {key: '2', text: 'Casa'      , flag: 'Casa'      , value: 'Casa'      },
-                        {key: '3', text: 'Indústria' , flag: 'Indústria' , value: 'Indústria' },
-                        {key: '4', text: 'Escritório', flag: 'Escritório', value: 'Escritório'},
-                        {key: '5', text: 'Alimentos' , flag: 'Alimentos' , value: 'Alimentos' }
-                    ]} />
-                <Input fluid style={{marginBottom: 20}} size='large' placeholder='Quantidade em Estoque' type='number' />
-                <Input fluid style={{marginBottom: 20}} size='large' placeholder='Quantidade mínima para venda'  type='number' />
-            </Grid.Column>
-            <Grid.Column width={6}>
-                <Input fluid style={{marginBottom: 20}} size='large' placeholder='Enviar imagens' type='file' labelPosition='top' >
-                    <Label>Enviar imagens</Label>
-                    <input/>
-                </Input>
-            </Grid.Column>
+          <Grid.Column  width={6}>
+            <Image bordered rounded size='large' src='https://react.semantic-ui.com/images/wireframe/white-image.png' />
+          </Grid.Column>
+          <Grid.Column width={8}>
+        <Grid.Row>
+            <Header as='h3' style={{ fontSize: '2em', paddingBottom : '100px'}}>
+              Batom
+            </Header>
         </Grid.Row>
-      </Grid></Form>
-                <Link to='/product_1'>
-                    <Button primary as='a' floated='right' size='large'> Cadastrar </Button>
-                </Link>
-                <Link to='/categories'>
-                    <Button primary as='a' basic floated='right' size='large'> Voltar </Button>
-                </Link>
-    </Container>
+        <Grid.Row style={{paddingBottom : '50px'}}>
+      <Dropdown button placeholder='Quantidade' options={options} selection/>
+
+        </Grid.Row>
+            <Header as='h3' style={{ fontSize: '2em', paddingBottom : '50px'}}>
+              R$ 42,00
+            </Header>
+              <Link to='/checkout'>
+                <Button size='huge'>Comprar</Button>
+              </Link>
+              <Button size='huge'>Adicionar ao carrinho</Button>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column textAlign='justified'>
+            <p style={{ fontSize: '1.33em' }}>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </Segment>
 
 
   </ResponsiveContainer>
 )
 
-export default HomepageLayout
+export default Batom
 

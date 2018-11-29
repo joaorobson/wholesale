@@ -82,7 +82,7 @@ class Checkout extends React.Component {
   	return (
 			<div>
 				<MyMenu />
-				<Container style={{ marginTop: '7%' }}>
+				<Container style={{ marginTop: '10em' }}>
 					<Grid columns={8}>
 						<Grid.Row>
 							<Header as='h3' style={{ fontSize: '2em'}}>
