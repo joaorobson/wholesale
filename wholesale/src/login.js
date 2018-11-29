@@ -43,10 +43,12 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Se cadastre agora 
-      <Icon name='right arrow' />
-    </Button>
+    <Link to='/register'>
+      <Button primary size='huge'>
+        Se cadastre agora 
+        <Icon name='right arrow' />
+      </Button>
+    </Link>
   </Container>
 )
 
@@ -101,10 +103,10 @@ class DesktopContainer extends Component {
                 <Menu.Item position='right'>
                     <Link to='/register'>
                         <Button as='a' inverted={!fixed}>
-                          Cadastrar 
+                          Cadastra-se
                         </Button>
                     </Link>
-      <Popup trigger={<Button inverted style={{ 'marginLeft': '0.5em' }}>Sign Up</Button> }  position='bottom center' on='click'  open={this.state.isOpen}
+      <Popup trigger={<Button inverted style={{ 'marginLeft': '0.5em' }}>Login</Button> }  position='bottom center' on='click'  open={this.state.isOpen}
             onClose={this.handleClose}
             onOpen={this.handleOpen}>  
        
