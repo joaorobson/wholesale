@@ -6,6 +6,7 @@ import {
   Dropdown,
   Menu,
 } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css'
 
 const MyMenu = () => (
