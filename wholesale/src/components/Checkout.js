@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import {
   Container,
 	Header,
@@ -172,7 +173,7 @@ class Checkout extends React.Component {
 								<Header as='h4'>Total da compra: R$ {this.checkoutTotal()}</Header>
 							</Grid.Column>
 							<Grid.Column width={3} style={{textAlign: 'center'}}>
-								<Button primary>Finalizar Compra</Button>
+								<Link to='/buy'><Button primary>Finalizar Compra</Button></Link>
 							</Grid.Column>
 						</Grid.Row>
 

@@ -7,6 +7,7 @@ import NewProduct from './components/NewProduct'
 import Register from './components/Register'
 import RegisterSuccess from './components/RegisterSuccess'
 import Checkout from './components/Checkout';
+import Buy from './components/SuccessBuy';
 
 function Routes() {
   return (
@@ -19,6 +20,7 @@ function Routes() {
         <Route path="/register" component={Register} />
         <Route path="/registerSuccess" component={RegisterSuccess} />
         <Route path="/checkout" component={Checkout} />
+        <Route path="/buy" component={Buy} />
       </div>
     </Router>
   );
