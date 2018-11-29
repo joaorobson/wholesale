@@ -11,6 +11,7 @@ import {
 } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import MyMenu from './Menu';
+import { subnetMatch } from 'ipaddr.js';
 
 const initialValue = [
 	{ name: 'Blusa Xadrez Masculina', desc: 'Vendida por Gama confecções', value: 20, qtd: 20, total: 0 },
@@ -66,13 +67,22 @@ class Checkout extends React.Component {
 		});
 	}
 
+	checkoutTotal() {
+		const { orders } = this.state;
+		let total = 0;
+
+		orders.map(o => total = total + o.total);
+
+		return total;
+	}
+
 	render() {
 		const { orders } = this.state;
 
   	return (
 			<div>
 				<MyMenu />
-				<Container style={{ marginTop: '10%' }}>
+				<Container style={{ marginTop: '7%' }}>
 					<Grid columns={8}>
 						<Grid.Row>
 							<Header as='h3' style={{ fontSize: '2em'}}>
@@ -120,7 +130,7 @@ class Checkout extends React.Component {
 															{order.name}
 														</Header>
 														<Header as='h4' disabled style={{margin: 0}}>{order.desc}</Header>
-														<Header as='h4' disabled style={{margin: 0}}>R$ {order.value}/un</Header>
+														<Header as='h4' disabled style={{margin: 0}}>R$ {order.value},00/u</Header>
 													</Grid.Column>
 												</Grid.Row>
 
@@ -152,7 +162,20 @@ class Checkout extends React.Component {
 								</Grid>
 							))
 						: null
-					}
+						}
+
+						<Grid.Row>
+							<Grid.Column width={10} style={{textAlign: 'center'}}>
+								<Header as='h4' disabled>{orders.length} produtos na lista de compras</Header>
+							</Grid.Column>
+							<Grid.Column width={3} style={{textAlign: 'center'}}>
+								<Header as='h4'>Total da compra: R$ {this.checkoutTotal()}</Header>
+							</Grid.Column>
+							<Grid.Column width={3} style={{textAlign: 'center'}}>
+								<Button primary>Finalizar Compra</Button>
+							</Grid.Column>
+						</Grid.Row>
+
 					</Grid>
 				</Container>
 			</div>
